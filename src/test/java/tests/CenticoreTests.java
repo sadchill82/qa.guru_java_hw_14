@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.Step;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.HomePage;
 import pages.ProductsPage;
@@ -15,18 +17,21 @@ public class CenticoreTests extends TestBase {
     private final AboutPage aboutPage = new AboutPage();
 
     @Test
+    @DisplayName("Verufy logo is displayed")
     void testLogoIsDisplayed() {
         homePage.open()
                 .verifyLogoIsDisplayed();
     }
 
     @Test
+    @DisplayName("Verify navigation menu is displayed")
     void testNavigationMenu() {
         homePage.open()
                 .verifyNavigationMenu();
     }
 
     @Test
+    @DisplayName("Verify navigation to Products page")
     void testNavigationToProductsPage() {
         homePage.open()
                 .goToProducts();
@@ -34,6 +39,7 @@ public class CenticoreTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Verify navigation to Career page")
     void testNavigationToCareerPage() {
         homePage.open()
                 .goToCareer();
@@ -41,6 +47,7 @@ public class CenticoreTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Verify navigation to Contacts page")
     void testNavigationToContactsPage() {
         homePage.open()
                 .goToContacts();
@@ -48,24 +55,28 @@ public class CenticoreTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Verify navigation to About page")
     void testFooterLinks() {
         homePage.open()
                 .verifyFooterLinks();
     }
 
     @Test
+    @DisplayName("Verify social media icons are displayed")
     void testMainNavButtonIsDisplayed() {
         homePage.open()
                 .verifyNavButtonIsDisplayed();
     }
 
     @Test
+    @DisplayName("Verify social media icons are displayed")
     void testNewsSectionIsDisplayed() {
         homePage.open()
                 .verifyGainsIsDisplayed();
     }
 
     @Test
+    @DisplayName("Verify navigation to About page")
     void testAboutPageNavigation() {
         homePage.open()
                 .goToAbout();
